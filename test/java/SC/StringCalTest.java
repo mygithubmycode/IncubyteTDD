@@ -21,6 +21,11 @@ public class StringCalTest {
     public void AllowUnknownNumbers(){
         Assert.assertEquals(2+3+5+8, StringCal.add("2,3,5,8"));
     }
+    @Test
+    public void NewlinesInsteadofCommas(){
+        Assert.assertEquals(2+3+5, StringCal.add("2n3,5"));
+    }
+
 }
 
 
