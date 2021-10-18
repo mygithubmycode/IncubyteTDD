@@ -25,6 +25,11 @@ public class StringCalTest {
     public void NewlinesInsteadofCommas(){
         Assert.assertEquals(2+3+5, StringCal.add("2n3,5"));
     }
+  @Test
+    public void SupportDifferentDelimiters(){
+      Assert.assertEquals(2+3+5, StringCal.add("//;n2;3;5"));
+  }
+
 
 }
 
