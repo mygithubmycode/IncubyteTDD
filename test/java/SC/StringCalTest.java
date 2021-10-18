@@ -30,6 +30,18 @@ public class StringCalTest {
       Assert.assertEquals(2+3+5, StringCal.add("//;n2;3;5"));
   }
 
+    @Test
+    public final void IfNegativesThrowExceptionMessage() {
+        RuntimeException exception = null;
+        try {
+            StringCal.add("2,3,-8,17,-21,28,53");
+        } catch (RuntimeException e) {
+            exception = e;
+        }
+        Assert.assertNotNull(exception);
+        Assert.assertEquals("Negatives not allowed: [-8, -21]", exception.getMessage());
+    }
+
 
 }
 
