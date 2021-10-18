@@ -17,5 +17,10 @@ public class StringCalTest {
     public void ifTwoNumbersReturnSum(){
         Assert.assertEquals(2+3, StringCal.add("2,3"));
     }
+    @Test
+    public void AllowUnknownNumbers(){
+        Assert.assertEquals(2+3+5+8, StringCal.add("2,3,5,8"));
+    }
 }
+
 
