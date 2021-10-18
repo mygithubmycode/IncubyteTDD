@@ -13,5 +13,9 @@ public class StringCalTest {
     public void ifOneNumberReturnNumber(){
         Assert.assertEquals(3, StringCal.add("3"));
     }
+    @Test
+    public void ifTwoNumbersReturnSum(){
+        Assert.assertEquals(2+3, StringCal.add("2,3"));
+    }
 }
 
