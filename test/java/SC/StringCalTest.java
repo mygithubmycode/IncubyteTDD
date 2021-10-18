@@ -9,5 +9,9 @@ public class StringCalTest {
     public void ifEmptyStringReturnZero(){
         Assert.assertEquals(0, StringCal.add(""));
     }
+    @Test
+    public void ifOneNumberReturnNumber(){
+        Assert.assertEquals(3, StringCal.add("3"));
+    }
 }
 
